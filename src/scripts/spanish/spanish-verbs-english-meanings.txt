@@ -1,0 +1,88 @@
+caminar walk
+llegar arrive
+comprar buy
+cambiar change
+limpiar clean
+hablar speak
+cortar cut
+dejar leave
+tomar drink
+escuchar listen
+mirar watch
+necesitar need
+pagar pay
+mandar order
+estudiar study
+enseñar teach
+viajar travel
+esperar hope
+trabajar work
+bajar go down
+preguntar ask
+apagar turn off
+prestar lend
+nadar swim
+llevar carry
+buscar search for
+ayudar help
+descansar rest
+cuidar take care of
+tratar try
+decir say
+pedir ask for
+servir serve
+poder be able to
+encontrar find
+volver return
+morir die
+dormir sleep
+jugar play
+tener have
+cerrar close
+entender understand
+empezar start
+pensar think
+querer want
+gustar like
+venir come
+#sentarse sit
+#despertarse wake up
+#divertirse have fun
+#dormirse fall asleep
+#acostarse go to bed
+#lavarse wash
+#caerse fall
+#sentarse sit
+#levantarse get up
+#despertarse wake up
+#acostarse go to bed
+#llamarse be called
+#divertirse have fun
+#dormirse fall asleep
+#quitarse take off
+comer eat
+aprender learn
+vender sell
+prender turn on
+creer believe
+leer read
+correr run
+escribir write
+vivir go
+abrir open
+subir go up
+traer bring
+hacer do
+salir go out
+poner put
+venir come
+tener have
+decir say
+#caerse fall
+saber know
+conocer know
+dar give
+ir go #stem changer
+estar be #stem changer
+ver see
+gustar like

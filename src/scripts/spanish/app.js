@@ -1,0 +1,1 @@
+const { translate } = require('./translator.js')

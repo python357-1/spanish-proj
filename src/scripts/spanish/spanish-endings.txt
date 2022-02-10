@@ -1,0 +1,27 @@
+# future
+yo
+tu
+el/ella
+nosotros
+ellos/ellas
+
+# present
+yo
+tu
+el/ella
+nosotros
+ellos/ellas
+
+#past (yesterday)
+#yo
+#tu
+#el/ella
+#nosotros
+#ellos/ellas
+
+#past (long ago)
+#yo
+#tu
+#el/ella
+#nosotros
+#ellos/ellas
