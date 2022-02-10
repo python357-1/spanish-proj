@@ -1,11 +1,19 @@
 <template>
     <div id='container'>
       <h1> {{spanish_text.spanish}} </h1>
-      <input type="text" name="guess" id="guess">
+      <input type="text" name="guess" id="guess" v-model='guess'>
       <br/>
       <div class='button-container'>
-        <input type="button" value="Guess" class='button'>
-        <input type="button" class='button' value="New Phrase">
+        <input 
+            type="button" value="Guess" 
+            class='button' @click='this.$emit("guess", guess)'
+        >
+        <input 
+            @click='newPhrase'
+            type="button" 
+            class='button' 
+            value="New Phrase" 
+        >
       </div>
     </div>
 </template>
@@ -14,9 +22,21 @@
 export default {
     data(){
         return {
+            guess: ''
         }
     },
-    props: ['spanish_text']
+    props: ['spanish_text'],
+    emits: ['guess', 'reset'],
+    methods: {
+        newPhrase: function newPhrase() {
+            // reset text in input
+            this.guess = ''
+            // emit
+            this.$emit('reset')
+            //  reset english box
+            //  find new random spanish word
+        }
+    }
 }
 </script>
 

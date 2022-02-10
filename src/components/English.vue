@@ -1,18 +1,18 @@
 <template>
     <div id='container'>
-        <h1> {{obfuscated_english}} </h1>
+        <h1 v-if='showAnswer == false'> {{obfuscated_english}} </h1>
+        <h1 v-if='showAnswer == true'> {{spanish_text.english}} </h1>
         <a>Solve</a>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['spanish_text'],
+    props: ['spanish_text', 'showAnswer'],
     computed: {
         obfuscated_english: function() {
             let temp = this.spanish_text.english.split('')
             let obfuscated_arr = new Array();
-            console.log("type of obfuscated_array: " + typeof obfuscated_arr)
             temp.forEach(letter => {
                 if (letter != ' ') {
                     obfuscated_arr.push('_')
@@ -21,14 +21,11 @@ export default {
                 }
             })
 
-            console.log(obfuscated_arr)
-            console.log(typeof obfuscated_arr)
-            
             obfuscated_arr[0] = temp[0]
             
             return obfuscated_arr.join('')
         }
-    }
+    },
 }
 </script>
 
