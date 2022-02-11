@@ -44,6 +44,7 @@ export default {
             console.log(random())
             this.object.spanishVerb = random();
             this.object.showAnswer = false;
+            this.clearLetters = 0;
         }
     },
     beforeMount() {
