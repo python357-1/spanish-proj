@@ -1,7 +1,8 @@
 <template>
   <div class="flex-container">
       <div class="flex-item" id="item-1">
-          <Spanish :spanish_text=object.spanishVerb 
+          <Spanish 
+          :spanish_text=object.spanishVerb 
           @guess='checkGuess' 
           @reset='resetGuess' 
           />
@@ -9,7 +10,8 @@
       <div class="flex-item" id="item-2">
           <English 
             :spanish_text=object.spanishVerb 
-            :showAnswer=showAnswer 
+            :showAnswer=object.showAnswer 
+            :clearLetters=clearLetters
             />
       </div>
   </div>
@@ -22,18 +24,16 @@ import { random } from "../scripts/spanish/random.js"
 export default {
     components: {Spanish, English},
     data () { 
-        let spanishVerb = random()
         return {
             //spanishVerb,
             //showAnswer: false
-            object: {
-                showAnswer: false,
-                spanishVerb: spanishVerb
-            }
+            object: {},
+            clearLetters: 0
         }
     },
     methods: {
         checkGuess: function (guess) {
+            this.clearLetters += 1;
             if (guess == this.object.spanishVerb.english) {
                 this.object.showAnswer = true
             } else {
@@ -41,11 +41,14 @@ export default {
             }
         },
         resetGuess: function () {
-            console.log(this.object.spanishVerb)
+            console.log(random())
             this.object.spanishVerb = random();
-            console.log(this.object.spanishVerb)
             this.object.showAnswer = false;
         }
+    },
+    beforeMount() {
+        this.object.showAnswer = false;
+        this.object.spanishVerb = random()
     },
 }
 </script>

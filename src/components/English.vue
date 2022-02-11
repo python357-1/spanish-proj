@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    props: ['spanish_text', 'showAnswer'],
+    props: ['spanish_text', 'showAnswer', 'clearLetters'],
     computed: {
         obfuscated_english: function() {
             let temp = this.spanish_text.english.split('')
@@ -20,8 +20,9 @@ export default {
                     obfuscated_arr.push(' ')
                 }
             })
-
-            obfuscated_arr[0] = temp[0]
+            for (let x = 0; x < this.clearLetters; x++) {
+                obfuscated_arr[x] = temp[x]
+            }
             
             return obfuscated_arr.join('')
         }
